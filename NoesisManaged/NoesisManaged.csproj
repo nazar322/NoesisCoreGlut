@@ -1,0 +1,1485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{324797A8-3464-4290-A307-2AB238BACCA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NoesisManaged</RootNamespace>
+    <AssemblyName>NoesisManaged</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\ICommand.cs" />
+    <Compile Include="Core\IItemContainerGenerator.cs" />
+    <Compile Include="Core\INotifyCollectionChanged.cs" />
+    <Compile Include="Core\InputEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IRecyclingItemContainerGenerator.cs" />
+    <Compile Include="Core\IScrollInfo.cs" />
+    <Compile Include="Core\IValueConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Library.cs" />
+    <Compile Include="Core\NetCoreAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NoesisCallbackAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NoesisError.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NoesisExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NoesisExtendBoxing.cs" />
+    <Compile Include="Core\NoesisExtendImports.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NoesisExtendProps.cs" />
+    <Compile Include="Core\NoesisGUI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NoesisLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NoesisRenderDevice.cs" />
+    <Compile Include="Core\NoesisRenderer.cs" />
+    <Compile Include="Core\NoesisSoftwareKeyboard.cs" />
+    <Compile Include="Core\NoesisView.cs" />
+    <Compile Include="Core\NotifyCollectionChangedEventArgs.cs" />
+    <Compile Include="Core\ObservableCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\AdornerDecorator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\AlignmentX.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\AlignmentY.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Animatable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\AnimationClock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\AnimationTimeline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ApplicationCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\AutoToolTipPlacement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BackEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BaseAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BaseComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BaseComponentExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BaseDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BeforeSetAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BeginStoryboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Binding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BindingBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BindingExpression.cs" />
+    <Compile Include="Proxies\BindingExpressionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BindingMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BindingOperations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BitmapImage.cs" />
+    <Compile Include="Proxies\BitmapScalingMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BitmapSource.cs" />
+    <Compile Include="Proxies\Bold.cs" />
+    <Compile Include="Proxies\BooleanAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BooleanKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BooleanKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Border.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BounceEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Brush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Brushes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BrushMappingMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\BulletDecorator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Button.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ButtonBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CanExecuteRoutedEventArgs.cs" />
+    <Compile Include="Proxies\CanvasNoesis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CaptureMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CharacterCasing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CheckBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CircleEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ClickMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Clock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ClockGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ClockState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Collection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CollectionView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CollectionViewSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Color.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ColorAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ColorAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ColorInterpolationMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ColorKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ColorKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Colors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ColumnDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ColumnDefinitionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CombinedGeometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ComboBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ComboBoxItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CommandBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CommandBindingCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ComponentCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CompositeTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Condition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ConditionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ContentControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ContentPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ContextMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ContextMenuEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ContextMenuService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Control.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ControllableStoryboardAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ControlTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CornerRadius.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\CubicEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Cursor.cs" />
+    <Compile Include="Proxies\Cursors.cs" />
+    <Compile Include="Proxies\DashStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DataTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DataTemplateSelector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DataTrigger.cs" />
+    <Compile Include="Proxies\Decorator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DefinitionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DependencyObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DependencyObjectExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DependencyProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DependencyPropertyChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DependencyPropertyExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteBooleanKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteColorKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteDoubleKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteInt16KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteInt32KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteObjectKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscretePointKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteRectKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteSizeKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteStringKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DiscreteThicknessKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DispatcherObject.cs" />
+    <Compile Include="Proxies\Dock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DockPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DoubleAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DoubleAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DoubleKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DoubleKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DragCompletedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DragDeltaEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\DragStartedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Duration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingColorKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingDoubleKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingFunctionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingInt16KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingInt32KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingPointKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingRectKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingSizeKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EasingThicknessKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ElasticEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Ellipse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EllipseGeometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\EventTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ExecutedRoutedEventArgs.cs" />
+    <Compile Include="Proxies\ExpandDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Expander.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ExponentialEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Expression.cs" />
+    <Compile Include="Proxies\ExtendCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ExtendConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ExtendDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ExtendDictionaryIndexer.cs" />
+    <Compile Include="Proxies\ExtendList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ExtendListIndexer.cs" />
+    <Compile Include="Proxies\ExtendObservableList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ExtendStream.cs" />
+    <Compile Include="Proxies\FileTextureProvider.cs" />
+    <Compile Include="Proxies\FillBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FillRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FlowDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FocusNavigationDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FontFamily.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FontProvider.cs" />
+    <Compile Include="Proxies\FontStretch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FontStretches.cs" />
+    <Compile Include="Proxies\FontStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FontStyles.cs" />
+    <Compile Include="Proxies\FontWeight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FontWeights.cs" />
+    <Compile Include="Proxies\FormattedText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FrameworkElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FrameworkElementExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FrameworkPropertyMetadata.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FrameworkPropertyMetadataExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FrameworkPropertyMetadataOptions.cs" />
+    <Compile Include="Proxies\FrameworkTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Freezable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\FreezableCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GeneratorDirection.cs" />
+    <Compile Include="Proxies\GeneratorPosition.cs" />
+    <Compile Include="Proxies\GeneratorStatus.cs" />
+    <Compile Include="Proxies\Geometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GeometryCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GeometryCombineMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GeometryGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GradientBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GradientSpreadMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GradientStop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GradientStopCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridLength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridNoesis.cs" />
+    <Compile Include="Proxies\GridUnitType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridViewColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridViewColumnCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridViewColumnHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridViewColumnHeaderRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridViewHeaderRowPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridViewRowPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GridViewRowPresenterBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\GroupBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\HandoffBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\HeaderedContentControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\HeaderedItemsControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\HierarchicalDataTemplate.cs" />
+    <Compile Include="Proxies\HitTestResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\HorizontalAlignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Hyperlink.cs" />
+    <Compile Include="Proxies\Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ImageBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ImageSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\InertiaExpansionBehavior.cs" />
+    <Compile Include="Proxies\InertiaRotationBehavior.cs" />
+    <Compile Include="Proxies\InertiaTranslationBehavior.cs" />
+    <Compile Include="Proxies\Inline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\InlineCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\InputBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\InputBindingCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\InputGesture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\InputGestureCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int16Animation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int16AnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int16KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int16KeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int32Animation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int32AnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int32KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Int32KeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Italic.cs" />
+    <Compile Include="Proxies\ItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ItemContainerGenerator.cs" />
+    <Compile Include="Proxies\ItemsChangedEventArgs.cs" />
+    <Compile Include="Proxies\ItemsControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ItemsPanelTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ItemsPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Keyboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyboardFocusChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyboardNavigation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyboardNavigationMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyGesture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeySpline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyStates.cs" />
+    <Compile Include="Proxies\KeyTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\KeyTimeType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Label.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Line.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearColorKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearDoubleKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearGradientBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearInt16KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearInt32KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearPointKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearRectKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearSizeKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LinearThicknessKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LineBreak.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LineGeometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LineStackingStrategy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ListBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ListBoxItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ListSortDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ListView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ListViewItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\LogicalTreeHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationCompletedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationDelta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationDeltaEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationInertiaStartingEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationModes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationStartedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationStartingEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ManipulationVelocities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Matrix2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Matrix3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Matrix3DProjection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Matrix4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MatrixTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Menu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MenuBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MenuItemRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Mouse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MouseButtonEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MouseEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MouseState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MouseWheelEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\MultiDataTrigger.cs" />
+    <Compile Include="Proxies\MultiTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NameScope.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NoesisGUI_.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NoesisGUI_PINVOKE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableBool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableCornerRadius.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableDouble.cs" />
+    <Compile Include="Proxies\NullableDuration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableFloat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableInt16.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableInt32.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableKeyTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullablePoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableRect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableSize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableThickness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableTimeSpan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\NullableUInt16.cs" />
+    <Compile Include="Proxies\NullableUInt32.cs" />
+    <Compile Include="Proxies\ObjectAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ObjectKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ObjectKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Orientation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\OverflowMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Page.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Panel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PanningMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ParallelTimeline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PasswordBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Path.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PauseStoryboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Pen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PenLineCap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PenLineJoin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PlacementMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PlaneProjection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PointAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PointAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Pointi.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PointKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PointKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Popup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PopupAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PowerEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ProgressBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Projection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PropertyAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PropertyMetadata.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PropertyMetadataExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\PropertyPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\QuadraticEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\QuarticEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\QueryCursorEventArgs.cs" />
+    <Compile Include="Proxies\QuinticEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RadialGradientBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RadioButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RangeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Rect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Rectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RectangleGeometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RectAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RectAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Recti.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RectKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RectKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RelativeSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RelativeSourceMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RenderOptions.cs" />
+    <Compile Include="Proxies\RepeatBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RepeatButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RequestBringIntoViewEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RequestNavigateEventArgs.cs" />
+    <Compile Include="Proxies\ResourceDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ResourceDictionaryCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ResourceKeyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ResumeStoryboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RotateTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RoutedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RoutedEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RoutedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RoutedUICommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RoutingStrategy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RowDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\RowDefinitionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Run.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScaleTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScrollBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScrollBarVisibility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScrollChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScrollContentPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScrollEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScrollEventType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ScrollUnit.cs" />
+    <Compile Include="Proxies\ScrollViewer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SelectionChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SelectionMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Selector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Separator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Setter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SetterBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SetterBaseCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Shape.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SineEase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Size.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SizeAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SizeAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SizeChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Sizei.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SizeKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SizeKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SkewTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Slider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SlipBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SolidColorBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Span.cs" />
+    <Compile Include="Proxies\SplineColorKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SplineDoubleKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SplineInt16KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SplineInt32KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SplinePointKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SplineRectKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SplineSizeKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SplineThicknessKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StackPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StatusBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StatusBarItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StopStoryboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Storyboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StreamGeometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StreamGeometryContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Stretch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StretchDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StringAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StringKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\StringKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Style.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\SweepDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TabControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TabItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TabPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TemplateBindingExpression.cs" />
+    <Compile Include="Proxies\TemplateBindingExtension.cs" />
+    <Compile Include="Proxies\TextAlignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TextBlock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TextBoxBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TextCompositionEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TextDecorations.cs" />
+    <Compile Include="Proxies\TextElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TextTrimming.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Texture.cs" />
+    <Compile Include="Proxies\TextureExtend.cs" />
+    <Compile Include="Proxies\TextureProvider.cs" />
+    <Compile Include="Proxies\TextureSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TextWrapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Thickness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ThicknessAnimation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ThicknessAnimationUsingKeyFrames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ThicknessKeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ThicknessKeyFrameCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Thumb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TickBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TickBarPlacement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TickPlacement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TileBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TileMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Timeline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TimelineCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TimelineGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TimeSpanStruct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToggleButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToolBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToolBarOverflowPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToolBarPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToolBarTray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToolTip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToolTipEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ToolTipService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TouchEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Track.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Transform2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Transform3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TransformCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TransformGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TransformNoesis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TranslateTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TraversalRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TreeView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TreeViewItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Trigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TriggerAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TriggerActionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TriggerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\TriggerCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\UIElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\UIElementCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\UIPropertyMetadata.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\UIPropertyMetadataExtend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Underline.cs" />
+    <Compile Include="Proxies\UniformGrid.cs" />
+    <Compile Include="Proxies\UpdateSourceTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\UserControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Vector3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Vector4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VerticalAlignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\ViewBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Viewbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VirtualizationCacheLength.cs" />
+    <Compile Include="Proxies\VirtualizationCacheLengthUnit.cs" />
+    <Compile Include="Proxies\VirtualizationMode.cs" />
+    <Compile Include="Proxies\VirtualizingPanel.cs" />
+    <Compile Include="Proxies\VirtualizingStackPanel.cs" />
+    <Compile Include="Proxies\Visibility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\Visual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualStateCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualStateGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualStateGroupCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualStateManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualTransition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualTransitionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\VisualTreeHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\WrapPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Proxies\XamlProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

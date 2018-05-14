@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NoesisAppManagedCore\NoesisAppManaged.WindowsCore.csproj" />
+    <ProjectReference Include="..\NoesisManagedCore\NoesisManagedCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="libGLUTWrapper.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="libNoesis.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

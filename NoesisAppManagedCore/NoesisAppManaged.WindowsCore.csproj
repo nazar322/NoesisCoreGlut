@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>NoesisApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\NoesisAppManaged\Core\Application.cs" Link="Core\Application.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\Display.cs" Link="Core\Display.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\EmbeddedFontProvider.cs" Link="Core\EmbeddedFontProvider.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\EmbeddedTextureProvider.cs" Link="Core\EmbeddedTextureProvider.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\EmbeddedXamlProvider.cs" Link="Core\EmbeddedXamlProvider.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\LocalFontProvider.cs" Link="Core\LocalFontProvider.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\LocalTextureProvider.cs" Link="Core\LocalTextureProvider.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\LocalXamlProvider.cs" Link="Core\LocalXamlProvider.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\RenderContext.cs" Link="Core\RenderContext.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\Win32Display.cs" Link="Core\Win32Display.cs" />
+    <Compile Include="..\NoesisAppManaged\Core\Window.cs" Link="Core\Window.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Core\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NoesisManagedCore\NoesisManagedCore.csproj" />
+  </ItemGroup>
+
+</Project>
