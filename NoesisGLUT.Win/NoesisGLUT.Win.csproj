@@ -23,6 +23,9 @@
     <None Update="Reflections.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Resources\logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

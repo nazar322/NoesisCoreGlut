@@ -37,6 +37,12 @@ namespace NoesisGLUT.Lnx
                 };
                 GUI.SetXamlProvider(new EmbeddedXamlProvider(xamls, Properties.Resources.ResourceManager));
 
+                EmbeddedTexture[] textures =
+                {
+                    new EmbeddedTexture {filename="logo.png", resource="logo"}
+                };
+                GUI.SetTextureProvider(new EmbeddedTextureProvider(textures, Properties.Resources.ResourceManager));
+
                 // Data loading
                 {
                     var content = (Noesis.Grid)Noesis.GUI.LoadXaml("Reflections.xaml");
